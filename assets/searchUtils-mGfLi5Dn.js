@@ -1,0 +1,1 @@
+function n(r){return r.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}function c(r,e){return e?n(r).includes(n(e)):!0}function a(r,e){if(!e)return!0;const t=n(e);return r.some(u=>n(u).includes(t))}export{a,c as m};
