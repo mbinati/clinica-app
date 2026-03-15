@@ -9,7 +9,7 @@ const isElectron = !!process.env.npm_lifecycle_event?.includes('electron')
   || !!process.env.ELECTRON
 
 export default defineConfig({
-  base: isElectron ? './' : '/',
+  base: isElectron ? './' : (process.env.GHPAGES ? '/clinica-app/' : '/'),
   plugins: [
     react(),
 
@@ -50,7 +50,7 @@ export default defineConfig({
           name: 'mbai sistemas',
           short_name: 'mbai',
           description: 'Sistema de gestão clínica — mbai sistemas',
-          start_url: '/',
+          start_url: process.env.GHPAGES ? '/clinica-app/' : '/',
           display: 'standalone',
           background_color: '#ffffff',
           theme_color: '#10b981',
