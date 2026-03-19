@@ -1,1 +1,0 @@
-import{r as a}from"./index-Bc6EG5s_.js";function i(e){const[r,n]=a.useState(()=>typeof window<"u"?window.matchMedia(e).matches:!1);return a.useEffect(()=>{const t=window.matchMedia(e),s=c=>n(c.matches);return t.addEventListener("change",s),n(t.matches),()=>t.removeEventListener("change",s)},[e]),r}function d(){return!i("(min-width: 768px)")}export{d as u};
